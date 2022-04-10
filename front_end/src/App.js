@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect,useCallback} from "react";
+import Per1Charts from './components/Per1Charts';
+import Cards from './components/Cards';
+import imagesfolder from './imagesfoler';
 
 function App() {
   const[alldata,setAllData]=useState([]);
@@ -39,17 +42,16 @@ function App() {
     }
     setIsLoading(false)
     },[]);
-
+  
   useEffect(()=>{
     fetchP1DataHandler();
   },[fetchP1DataHandler])
 
-  console.log(alldata)
   return (
-    <div className='App'>
-      <p>Hi</p>
+    <div>
+      <Cards folder={imagesfolder}/>
+      <Per1Charts alldata={alldata}/>
     </div>
-
   );
 }
 

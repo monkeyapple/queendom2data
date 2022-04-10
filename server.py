@@ -16,6 +16,7 @@ try:
     def fetch_all_groups():
         pg_cur.execute('SELECT * FROM performance1')
         rows=pg_cur.fetchall()
+        print(rows)
         return jsonify(rows)
 
 except:
