@@ -8,9 +8,9 @@ const CardUI=(props)=>{
             </div>
             <div className="card-body">
                 <h4 className="card-title">{props.groupname}</h4>
-                {/* <a href='#' className='btn btn-outline-success'>
+                <a href={props.link} className='btn btn-outline-success' target="_blank">
                 Watch
-                </a> */}
+                </a>
             </div>    
         </div>
     );

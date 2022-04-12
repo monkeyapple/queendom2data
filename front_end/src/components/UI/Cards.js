@@ -1,12 +1,13 @@
 import CardUI from "./CardUI"
 
 const Cards=(props)=>{
-    const cardLayout=(image)=>{
+    const cardLayout=(group)=>{
         return(
             <div className="col-md-2">
                 <CardUI 
-                    imgAddress={image.imgURL}
-                    groupname={image.name}
+                    imgAddress={group.imgURL}
+                    groupname={group.name}
+                    link={group.per1Link}
                 />
             </div>
         );
@@ -15,7 +16,7 @@ const Cards=(props)=>{
     return(
         
         <div className="row">
-            {props.folder.map(cardLayout)}   
+            {props.assets.map(cardLayout)}   
         </div>
 
     );

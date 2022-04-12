@@ -3,7 +3,7 @@ import './App.css';
 import React, { useState, useEffect,useCallback} from "react";
 import Per1Charts from './components/Per1Charts';
 import Cards from './components/UI/Cards';
-import imagesfolder from './imagesfoler';
+import GroupAssets from './GroupAssets';
 
 function App() {
   const[alldata,setAllData]=useState([]);
@@ -56,7 +56,7 @@ function App() {
           <h1>Round 1</h1>
         </div>
         <div className="container-fluid video d-flex justify-content-center">
-          <Cards folder={imagesfolder}/>
+          <Cards assets={GroupAssets}/>
         </div>
         <div className="container-fluid view-chart">
           <Per1Charts alldata={alldata}/>
