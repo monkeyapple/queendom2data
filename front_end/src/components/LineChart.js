@@ -1,9 +1,11 @@
-import { Line } from 'react-chartjs-2';
 import React from 'react';
+import { Line } from "react-chartjs-2";
+import 'chartjs-adapter-date-fns';
 import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
+  TimeScale,
   PointElement,
   LineElement,
   Title,
@@ -14,40 +16,44 @@ import {
 ChartJS.register(
   CategoryScale,
   LinearScale,
+  TimeScale,
   PointElement,
   LineElement,
   Title,
   Tooltip,
   Legend
 );
+
 const LineChart=(props)=>{
   const options = {
-    // scales:{
-    //   x:{
-    //     min:0,
-    //     max:50
-    //   },
-    //   y:{
-    //     beginAtZero:true
-    //   }
-    // },
     spanGaps:true,
-    // showLine: false,
-    // datasets: {
-    //   line: {
-    //       pointRadius: 0 // disable for all `'line'` datasets
-    //   }
-    // },
-    // responsive:true,
-    // maintainAspectRatio:false,
     layout:{
       padding:{
-        left: 20,
-        right:20,
-        top:10,
-        bottom:10
+        left: 15,
+        right:15,
+        top:8,
+        bottom:8
 
       }
+    },
+    scales:{
+      x:{
+        type:'time',
+        ticks:{
+          major:{
+            enabled:true
+          },
+          font:(context)=>{
+            console.log(context.tick && context.tick.major)
+            const boldedTicks=context.tick && context.tick.major? 'bold':'';
+            return{weight:boldedTicks};
+          }
+        }
+      },
+      y:{
+        beginAtZero:true
+      }
+
     },
     elements: {
         point: {
@@ -60,58 +66,66 @@ const LineChart=(props)=>{
       },
       title: {
         display: true,
-        text: 'Chart.js Line Chart',
+        text: 'YouTube Views',
+        align:'center',
+        font:{
+          size:20
+        }
       },
+
     },
+
   };
   
   const data = {
     labels:props.labels,
     datasets: [
       {
-        label: 'BraveGirls',
-        data: props.bravegirlsViewData,
-        borderColor: 'rgb(136, 29, 72)',
-        backgroundColor: 'rgba(136, 29, 72, 0.5)',
-      },
-      {
         label: 'Hyolyn',
         data: props.hyolynViewData,
-        borderColor: 'rgb(160, 30, 152)',
-        backgroundColor: 'rgba(160, 30, 152, 0.5)',
+        borderColor: 'rgb(250,212,0)',
+        backgroundColor: 'rgba(250,212,0, 0.5)',
       },
       {
-        label: 'Kep1er',
-        data: props.kep1erViewData,
-        borderColor: 'rgb(200, 30, 124)',
-        backgroundColor: 'rgba(200, 30, 124, 0.5)',
-      },
-      {
-        label: 'Loona',
-        data: props.loonaViewData,
-        borderColor: 'rgb(120, 99, 132)',
-        backgroundColor: 'rgba(120, 99, 132, 0.5)',
-      },
-      {
-        label: 'Viviz',
-        data: props.vivizViewData,
-        borderColor: 'rgb(255, 99, 132)',
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        label: 'BraveGirls',
+        data: props.bravegirlsViewData,
+        borderColor: 'rgb(32,0,114)',
+        backgroundColor: 'rgba(32,0,114, 0.5)',
       },
       {
         label: 'WJSN',
         data: props.wjsnViewData,
+        borderColor: 'rgb(83,178,255)',
+        backgroundColor: 'rgba(83,178,255, 0.5)',
+      },
+      {
+        label: 'Loona',
+        data: props.loonaViewData,
         borderColor: 'rgb(230, 120, 12)',
         backgroundColor: 'rgba(230, 120, 12, 0.5)',
+
+      },
+      {
+        label: 'Viviz',
+        data: props.vivizViewData,
+        borderColor: 'rgb(196,54,36)',
+        backgroundColor: 'rgba(196,54,36,0.5)',
+      },
+      {
+        label: 'Kep1er',
+        data: props.kep1erViewData,
+        borderColor: 'rgb(26,164,106)',
+        backgroundColor: 'rgba(26,164,106, 0.5)',
       },
 
     ],
   };
 
-  return <Line options={options} data={data} />;
+  
+
+  return (<Line options={options} data={data} />);
   
 }
-
 
 export default LineChart;
 

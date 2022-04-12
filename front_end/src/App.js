@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect,useCallback} from "react";
 import Per1Charts from './components/Per1Charts';
-import Cards from './components/Cards';
+import Cards from './components/UI/Cards';
 import imagesfolder from './imagesfoler';
 
 function App() {
@@ -47,10 +47,28 @@ function App() {
     fetchP1DataHandler();
   },[fetchP1DataHandler])
 
+  
+
   return (
     <div>
-      <Cards folder={imagesfolder}/>
-      <Per1Charts alldata={alldata}/>
+      <section className="per1-section">
+        <div className='textTitle'>
+          <h1>Round 1</h1>
+        </div>
+        <div className="container-fluid video d-flex justify-content-center">
+          <Cards folder={imagesfolder}/>
+        </div>
+        <div className="container-fluid view-chart">
+          <Per1Charts alldata={alldata}/>
+        </div>
+      </section>
+      
+      <section className="per2-section">
+        <div className='textTitle'>
+          <h1>Round 2</h1>
+        </div>
+        <div class="neu">Coming Soon</div>
+      </section>
     </div>
   );
 }

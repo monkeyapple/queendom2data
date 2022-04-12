@@ -1,5 +1,6 @@
 import LineChart from "./LineChart";
-import "./UI/styles.css";
+import LineChartScroll from "./LineChartScroll";
+import "./UI/Shadowbox.css";
 const Per1Charts=(props)=>{
     const bravegirlsViewData=[];
     // const bravegirlsLikesData=[];
@@ -16,7 +17,7 @@ const Per1Charts=(props)=>{
     const labels=[];
 
     (props.alldata).forEach(ele => {
-        labels.push(ele['update_time']);
+        labels.push(new Date(ele['update_time']));
         bravegirlsViewData.push(ele['bravegirls_views']);
         // bravegirlsLikesData.push(ele['bravegirls_likes']);
         hyolynViewData.push(ele['hyolyn_views']);
@@ -34,12 +35,13 @@ const Per1Charts=(props)=>{
     console.log(vivizViewData)
     console.log(hyolynViewData)
     return(
-        <div>
-            <div className="box card">
+
+        <div className="box shadowcard" id="chartWrapper">
             <LineChart labels={labels} bravegirlsViewData={bravegirlsViewData} hyolynViewData={hyolynViewData} kep1erViewData={kep1erViewData} loonaViewData={loonaViewData} vivizViewData={vivizViewData} wjsnViewData={wjsnViewData}/>
-            </div>
             
-        </div>
+        </div>  
+
+
     );
 
 }
