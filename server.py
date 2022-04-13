@@ -1,7 +1,7 @@
 from flask import Flask,jsonify, send_from_directory
 import psycopg2
 import os
-from flask_cors import CORS
+from flask_cors import CORS,cross_origin
 
 app=Flask(__name__,static_folder='front_end/build',static_url_path='')
 CORS(app)
@@ -14,14 +14,16 @@ except:
     print('Error')
 
 @app.route('/fetch')
+@cross_origin()
 def fetch_all_groups():
     pg_cur.execute('SELECT * FROM qdscraper_1')
     rows=pg_cur.fetchall()
     return jsonify(rows)
+    
 @app.route('/')
+@cross_origin()
 def serve():
     return send_from_directory(app.static_folder,'index.html')
-
 
 if __name__=='__main__':
     app.run()
