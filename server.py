@@ -15,7 +15,7 @@ except:
 
 @app.route('/')
 def fetch_all_groups():
-    pg_cur.execute('SELECT * FROM performance1')
+    pg_cur.execute('SELECT * FROM qdscraper_1')
     rows=pg_cur.fetchall()
     return jsonify(rows)
 @app.route('/')
