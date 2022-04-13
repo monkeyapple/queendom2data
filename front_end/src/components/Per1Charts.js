@@ -35,12 +35,15 @@ const Per1Charts=(props)=>{
     console.log(vivizViewData)
     console.log(hyolynViewData)
     return(
+        <div>
 
-        <div className="box shadowcard" id="chartWrapper">
-            <LineChart labels={labels} bravegirlsViewData={bravegirlsViewData} hyolynViewData={hyolynViewData} kep1erViewData={kep1erViewData} loonaViewData={loonaViewData} vivizViewData={vivizViewData} wjsnViewData={wjsnViewData}/>
-            
-        </div>  
-
+            <div className="box shadowcard" id="chartWrapper">
+                <LineChart labels={labels} bravegirlsViewData={bravegirlsViewData} hyolynViewData={hyolynViewData} kep1erViewData={kep1erViewData} loonaViewData={loonaViewData} vivizViewData={vivizViewData} wjsnViewData={wjsnViewData}/>
+            </div>  
+            <div className="box shadowcard" id="chartWrapper">
+                <LineChartScroll labels={labels} bravegirlsViewData={bravegirlsViewData} hyolynViewData={hyolynViewData} kep1erViewData={kep1erViewData} loonaViewData={loonaViewData} vivizViewData={vivizViewData} wjsnViewData={wjsnViewData}/>
+            </div>  
+        </div>
 
     );
 
