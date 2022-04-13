@@ -36,25 +36,25 @@ const LineChart=(props)=>{
 
       }
     },
-    scales:{
-      x:{
-        type:'time',
-        ticks:{
-          major:{
-            enabled:true
-          },
-          font:(context)=>{
-            console.log(context.tick && context.tick.major)
-            const boldedTicks=context.tick && context.tick.major? 'bold':'';
-            return{weight:boldedTicks};
-          }
-        }
-      },
-      y:{
-        beginAtZero:true
-      }
+    // scales:{
+    //   x:{
+    //     type:'time',
+    //     ticks:{
+    //       major:{
+    //         enabled:true
+    //       },
+    //       font:(context)=>{
+    //         console.log(context.tick && context.tick.major)
+    //         const boldedTicks=context.tick && context.tick.major? 'bold':'';
+    //         return{weight:boldedTicks};
+    //       }
+    //     }
+    //   },
+    //   y:{
+    //     beginAtZero:true
+    //   }
 
-    },
+    // },
     elements: {
         point: {
             radius: 0.5 // default to disabled in all datasets
