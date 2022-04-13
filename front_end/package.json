@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+
   "proxy":"https://queendom2.herokuapp.com/",
   "private": true,
   "dependencies": {
