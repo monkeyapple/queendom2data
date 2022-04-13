@@ -13,7 +13,7 @@ try:
 except:
     print('Error')
 
-@app.route('/')
+@app.route('/fetch',methods=['GET'])
 def fetch_all_groups():
     pg_cur.execute('SELECT * FROM qdscraper_1')
     rows=pg_cur.fetchall()
@@ -21,8 +21,6 @@ def fetch_all_groups():
 @app.route('/')
 def serve():
     return send_from_directory(app.static_folder,'index.html')
-
-
 
 
 if __name__=='__main__':

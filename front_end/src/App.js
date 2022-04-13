@@ -14,7 +14,7 @@ function App() {
     setIsLoading(true);
     setError(null);
     try{
-      const response=await fetch("https://queendom2.herokuapp.com/");
+      const response=await fetch("https://queendom2.herokuapp.com/fetch");
       const data=await response.json();
       const transformedData=Object.values(data).map((rowData)=>{
         return{
