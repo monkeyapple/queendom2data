@@ -42,11 +42,12 @@ function App() {
     }
     setIsLoading(false)
     },[]);
+    
   
   useEffect(()=>{
     fetchP1DataHandler();
   },[fetchP1DataHandler])
-
+  console.log(alldata)
   
 
   return (

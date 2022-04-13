@@ -13,7 +13,7 @@ try:
 except:
     print('Error')
 
-@app.route('/fetch',methods=['GET'])
+@app.route('/fetch')
 def fetch_all_groups():
     pg_cur.execute('SELECT * FROM qdscraper_1')
     rows=pg_cur.fetchall()
