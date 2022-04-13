@@ -39,21 +39,15 @@ const LineChart=(props)=>{
     scales:{
       x:{
         type:'time',
-        time: {
-          unit: 'hour',
-          // stepSize: 1, // I'm using 3 hour intervals here
-          tooltipFormat: 'HH:mm',
-          },
         ticks:{
           major:{
-            enabled:true,
+            enabled:true
           },
           font:(context)=>{
             console.log(context.tick && context.tick.major)
             const boldedTicks=context.tick && context.tick.major? 'bold':'';
             return{weight:boldedTicks};
           }
-
         }
       },
       y:{

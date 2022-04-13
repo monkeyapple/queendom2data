@@ -17,7 +17,10 @@ const Per1Charts=(props)=>{
     const labels=[];
 
     (props.alldata).forEach(ele => {
-        labels.push(new Date(ele['update_time']));
+        var d=new Date(ele['update_time'])
+        console.log(d)
+        d.setHours(d.getHours() - 8);
+        labels.push(d);
         bravegirlsViewData.push(ele['bravegirls_views']);
         // bravegirlsLikesData.push(ele['bravegirls_likes']);
         hyolynViewData.push(ele['hyolyn_views']);
@@ -32,16 +35,11 @@ const Per1Charts=(props)=>{
         // wjsnLikesData.push(ele['wjsn_likes'])
 
     });
-    console.log(vivizViewData)
-    console.log(hyolynViewData)
     return(
         <div>
 
             <div className="box shadowcard" id="chartWrapper">
                 <LineChart labels={labels} bravegirlsViewData={bravegirlsViewData} hyolynViewData={hyolynViewData} kep1erViewData={kep1erViewData} loonaViewData={loonaViewData} vivizViewData={vivizViewData} wjsnViewData={wjsnViewData}/>
-            </div>  
-            <div className="box shadowcard" id="chartWrapper">
-                <LineChartScroll labels={labels} bravegirlsViewData={bravegirlsViewData} hyolynViewData={hyolynViewData} kep1erViewData={kep1erViewData} loonaViewData={loonaViewData} vivizViewData={vivizViewData} wjsnViewData={wjsnViewData}/>
             </div>  
         </div>
 
