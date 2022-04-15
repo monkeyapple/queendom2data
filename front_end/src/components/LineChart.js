@@ -64,14 +64,14 @@ const LineChart=(props)=>{
       legend: {
         position: 'top',
       },
-      title: {
-        display: true,
-        text: 'YouTube Views',
-        align:'center',
-        font:{
-          size:20
-        }
-      },
+      // title: {
+      //   display: true,
+      //   text: 'YouTube Views',
+      //   align:'center',
+      //   font:{
+      //     size:20
+      //   }
+      // },
 
     },
 

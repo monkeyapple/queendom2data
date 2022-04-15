@@ -1,6 +1,7 @@
 import LineChart from "./LineChart";
 import LineChartScroll from "./LineChartScroll";
 import "./UI/Shadowbox.css";
+import ChartTotal from "./ChartTotal";
 const Per1Charts=(props)=>{
     const bravegirlsViewData=[];
     // const bravegirlsLikesData=[];
@@ -16,7 +17,7 @@ const Per1Charts=(props)=>{
     // const wjsnLikesData=[];
     const labels=[];
 
-    (props.alldata).forEach(ele => {
+    (props.alldata_Per1).forEach(ele => {
         var d=new Date(ele['update_time'])
         console.log(d)
         d.setHours(d.getHours() - 8);
@@ -38,8 +39,19 @@ const Per1Charts=(props)=>{
     return(
         <div>
 
-            <div className="box shadowcard" id="chartWrapper">
+            {/* <div className="box shadowcard" id="chartWrapper">
+                <ChartTotal totalViews={props.totalViews}/>
                 <LineChart labels={labels} bravegirlsViewData={bravegirlsViewData} hyolynViewData={hyolynViewData} kep1erViewData={kep1erViewData} loonaViewData={loonaViewData} vivizViewData={vivizViewData} wjsnViewData={wjsnViewData}/>
+            </div>   */}
+            <div className="card" id="per1card">
+                <div className="card-header">
+                    <h2>YouTube Views&Likes</h2>
+                </div>
+                <div className="card-body">
+                    <ChartTotal totalViews={props.totalViews} yesterdayTotalViews={props.yesterdayTotalViews} totalViewTime={props.totalViewTime}/>
+                    <LineChart labels={labels} bravegirlsViewData={bravegirlsViewData} hyolynViewData={hyolynViewData} kep1erViewData={kep1erViewData} loonaViewData={loonaViewData} vivizViewData={vivizViewData} wjsnViewData={wjsnViewData}/>
+                </div>
+                
             </div>  
         </div>
 
