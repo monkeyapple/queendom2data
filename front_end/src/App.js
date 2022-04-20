@@ -16,56 +16,43 @@ function App() {
   const[per2data,SetPer2Data]=useState({});
 
   // Solution1: use axios 
-    useEffect(()=>{
-    const fetchDataHandler=async()=>{
-      try{
-        // const response=await axios.get("http://localhost:5000/fetch") 
-        const response=await axios.get("https://queendom2.herokuapp.com/fetch") 
-        const data1=DataFactory(response.data.per1)
-        const data2=DataFactory(response.data.per2)
-        SetPer1Data(data1) 
-        SetPer2Data(data2)
-      }catch(error){
-        console.error(error);
-      }
-    }; 
-    fetchDataHandler();
-  },[])
-  // useEffect(()=>{
+  //   useEffect(()=>{
   //   const fetchDataHandler=async()=>{
   //     try{
   //       // const response=await axios.get("http://localhost:5000/fetch") 
   //       const response=await axios.get("https://queendom2.herokuapp.com/fetch") 
-  //       const rawData=await response.data
-  //       SetPer1Data(DataFactory(rawData.per1)) 
-  //       SetPer2Data(DataFactory(rawData.per2))
+  //       const data1=DataFactory(response.data.per1)
+  //       const data2=DataFactory(response.data.per2)
+  //       SetPer1Data(data1) 
+  //       SetPer2Data(data2)
   //     }catch(error){
   //       console.error(error);
   //     }
   //   }; 
   //   fetchDataHandler();
   // },[])
-  //Solution2:use built-in fetch
-  // const fetchDataHandler=useCallback(async()=>{
-  //   setIsLoading(true);
-  //   setError(null);
-  //   try{
-  //     const response=await fetch("https://queendom2.herokuapp.com/fetch");
-  //     // const response=await fetch("http://localhost:5000/fetch") 
-  //     if (!response.ok){
-  //       throw new Error('Something went wrong while fetching data');
-  //     }
-  //     const rawData=await response.json()
-  //     SetPer1Data(DataFactory(rawData.per1)) 
-  //     SetPer2Data(DataFactory(rawData.per2))
-  //   }catch(error){
-  //     setError(error.message);
-  //   }
-  //   setIsLoading(false);
-  // },[]);
-  // useEffect(()=>{
-  //   fetchDataHandler();
-  // },[fetchDataHandler]);
+
+  // Solution2:use built-in fetch
+  const fetchDataHandler=useCallback(async()=>{
+    setIsLoading(true);
+    setError(null);
+    try{
+      const response=await fetch("https://queendom2.herokuapp.com/fetch");
+      // const response=await fetch("http://localhost:5000/fetch") 
+      if (!response.ok){
+        throw new Error('Something went wrong while fetching data');
+      }
+      const rawData=await response.json()
+      SetPer1Data(DataFactory(rawData.per1)) 
+      SetPer2Data(DataFactory(rawData.per2))
+    }catch(error){
+      setError(error.message);
+    }
+    setIsLoading(false);
+  },[]);
+  useEffect(()=>{
+    fetchDataHandler();
+  },[fetchDataHandler]);
 
 
   console.log(per1data)
