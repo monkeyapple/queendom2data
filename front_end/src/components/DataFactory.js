@@ -9,7 +9,8 @@ export const DataFactory=(data)=>{
 
     try{
         const getAlldata=Object.values(data).map((rowData,index)=>{
-            // when reach the last day  in the row
+            console.log('rowdata is'+rowData)
+            console.log('rowdataLength is'+rowData.length)
             if(rowData[12].slice(0,10)===data[data.length-1][12].slice(0,10) && rowData[12].slice(11)==="00:00:00" ){
                 lastDayTime=rowData[12]
                 const lastday_row_values = Object.values(rowData)
