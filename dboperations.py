@@ -6,6 +6,7 @@ load_dotenv()
 class DatabaseOperate():
     def query_table1(self):
         try:
+            # database_url=os.environ.get('DATABASE_URL').replace("postgres://", "postgresql://", 1)
             database_url=os.environ.get('DATABASE_URL').replace("postgres://", "postgresql://", 1)
             pg_conn=psycopg2.connect(database_url)
             pg_cur=pg_conn.cursor()
