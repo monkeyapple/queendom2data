@@ -18,11 +18,9 @@ function App() {
       try{
         // const response=await axios.get("http://localhost:5000/fetch") 
         const response=await axios.get("https://queendom2.herokuapp.com/fetch") 
-        const rawdata1=await response.data.per1
-        const rawdata2=await response.data.per2
-        const data1=DataFactory(rawdata1)
-        const data2=DataFactory(rawdata2)
-        console.log('data1 is'+data1)
+        const rawdata=await response.data
+        const data1=DataFactory(rawdata.per1)
+        const data2=DataFactory(rawdata.per2)
         SetPer1Data(data1) 
         SetPer2Data(data2)
         

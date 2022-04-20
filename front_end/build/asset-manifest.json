@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.31fab167.css",
-    "main.js": "/static/js/main.41f55a0e.js",
+    "main.js": "/static/js/main.c76dbc16.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/loona_per1.jpeg": "/static/media/loona_per1.7595622933af7bcfd889.jpeg",
     "static/media/bravegirls_per2.jpeg": "/static/media/bravegirls_per2.4190b3fcc5cc419914da.jpeg",
@@ -16,11 +16,11 @@
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.31fab167.css.map": "/static/css/main.31fab167.css.map",
-    "main.41f55a0e.js.map": "/static/js/main.41f55a0e.js.map",
+    "main.c76dbc16.js.map": "/static/js/main.c76dbc16.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31fab167.css",
-    "static/js/main.41f55a0e.js"
+    "static/js/main.c76dbc16.js"
   ]
 }
