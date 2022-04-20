@@ -4,6 +4,7 @@ from dboperations import DatabaseOperate
 app=Flask(__name__,static_folder='front_end/build',static_url_path='')
 CORS(app)
 
+
 @app.route('/fetch')
 @cross_origin()
 def fetch_all_groups():
@@ -18,5 +19,5 @@ def serve():
     return send_from_directory(app.static_folder,'index.html')
 
 if __name__=='__main__':
-    # app.run()
-    app.run(port=5000,debug=True)
+    app.run()
+    # app.run(port=5000,debug=True)

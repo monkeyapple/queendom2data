@@ -5,9 +5,10 @@ const Cards=(props)=>{
         return(
             <div className="col-md-2">
                 <CardUI 
-                    imgAddress={group.imgURL}
+                    imgURL={group.imgURL}
+                    performanceNum={props.performanceNum}
                     groupname={group.name}
-                    link={group.per1Link}
+                    link={group.videoLink[props.performanceNum]}
                 />
             </div>
         );

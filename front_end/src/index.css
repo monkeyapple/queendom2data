@@ -81,7 +81,7 @@ h2{
 
 h3{
   font-family: 'Oswald';
-  margin: 20px 10px !important;
+  margin: 20px 10px 10px 10px !important;
   font-weight:500 !important;
   text-align: center;
   font-size: 30px !important;
@@ -90,10 +90,10 @@ h3{
 }
 
 h4{
-  font-family: 'Poppins';
-  margin: 20px 30px;
-  font-weight: 500;
-  text-align: left;
+  font-family: 'Oswald';
+  margin: 5px 10px 10px 10px !important;
+  font-weight:500 !important;
+  text-align: center;
   font-size: 30px !important;
   position:relative;
   color:#404040;
@@ -106,10 +106,31 @@ h5{
   position:relative;
   color:gray;
 }
+h6{
+  font-family: 'Poppins';
+  font-weight: 300;
+  text-align: center;
+  font-size: 13px !important;
+  position:relative;
+  color:gray;
+}
+
 
 /* Per1card */
 .textTitle.divider{
   text-align: center;
+}
+.textTitle{
+  margin: 4rem 1rem 2rem 1rem;
+}
+
+.badge-increase-bg {
+  color: #024a17!important;
+  background-color: #cdf5d9!important;
+}
+.badge-decrease-bg {
+  color: #550103!important;
+  background-color: #eba3a4!important;
 }
 /* ytviews&likes card*/
 .border-start{
@@ -132,4 +153,12 @@ h5{
   text-shadow: 5px 5px 8px #00000027, -5px -5px 8px #ffffff;
   text-align: center;
 
+}
+.footer{
+  width:100%;
+  height: 3rem;
+  /* background-color: rgba(0, 0, 0, .1); */
+  /* border: solid rgba(0, 0, 0, .15); */
+  border-width: 1px 0;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 }

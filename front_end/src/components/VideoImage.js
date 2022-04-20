@@ -1,6 +1,6 @@
 const VideoImage=(props)=>{
     return(
-        <img src={props.imgAddress} alt="video_img" className="card-img-top"></img>
+        <img src={props.imgURL[props.performanceNum-1]} alt="video_img" className="card-img-top"></img>
         
     );
 
