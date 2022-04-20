@@ -10,8 +10,8 @@ import Footer from './components/Footer';
 
 
 function App() {
-  // const [isLoading,setIsLoading]=useState(false);
-  // const [error,setError]=useState(null);
+  const [isLoading,setIsLoading]=useState(false);
+  const [error,setError]=useState(null);
   const[per1data,SetPer1Data]=useState({});
   const[per2data,SetPer2Data]=useState({});
 
@@ -37,7 +37,7 @@ function App() {
     setIsLoading(true);
     setError(null);
     try{
-      const response=await fetch("https://queendom2.herokuapp.com/fetch");
+      const response=await fetch('/fetch');
       // const response=await fetch("http://localhost:5000/fetch") 
       if (!response.ok){
         throw new Error('Something went wrong while fetching data');
