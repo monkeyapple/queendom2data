@@ -1,7 +1,9 @@
+from flask_sqlalchemy import SQLAlchemy
 from flask import jsonify,Flask,send_from_directory
 from flask_cors import CORS
 from dboperations import DatabaseOperate
 app=Flask(__name__,static_folder='front_end/build',static_url_path='')
+Talisman(app, content_security_policy=None)
 CORS(app)
 
 
