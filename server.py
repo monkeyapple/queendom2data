@@ -1,4 +1,3 @@
-from flask_sqlalchemy import SQLAlchemy
 from flask import jsonify,Flask,send_from_directory
 from flask_cors import CORS
 from dboperations import DatabaseOperate
