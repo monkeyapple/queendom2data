@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.31fab167.css",
-    "main.js": "/static/js/main.8c0ae291.js",
+    "main.js": "/static/js/main.2835d9ae.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/loona_per1.jpeg": "/static/media/loona_per1.7595622933af7bcfd889.jpeg",
     "static/media/bravegirls_per2.jpeg": "/static/media/bravegirls_per2.4190b3fcc5cc419914da.jpeg",
@@ -9,18 +9,20 @@
     "static/media/wjsn_per1.jpeg": "/static/media/wjsn_per1.da441bdc7104cbecec84.jpeg",
     "static/media/hyolyn_per1.jpeg": "/static/media/hyolyn_per1.f8dbc075a8db27decf6b.jpeg",
     "static/media/viviz_per1.jpeg": "/static/media/viviz_per1.bf366ae3d3e42669c324.jpeg",
+    "static/media/ke1per_per2.jpeg": "/static/media/ke1per_per2.1adfb05e3a41b11b27be.jpeg",
+    "static/media/hyolyn_per2.jpeg": "/static/media/hyolyn_per2.9e1870ad0a9e650e2abe.jpeg",
     "static/media/wjsn_per2.jpeg": "/static/media/wjsn_per2.6d2fc99de90cff7ae5fc.jpeg",
     "static/media/bravegirls_per1.jpeg": "/static/media/bravegirls_per1.967ae60b884f85bc8c3c.jpeg",
     "static/media/ke1per_per1.jpeg": "/static/media/ke1per_per1.08c49b1ea39370d144c2.jpeg",
-    "static/media/soonImage.jpeg": "/static/media/soonImage.7553d9de8dbb223f02c9.jpeg",
+    "static/media/viviz_per2.jpeg": "/static/media/viviz_per2.73c3406a839d1f75eab3.jpeg",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.31fab167.css.map": "/static/css/main.31fab167.css.map",
-    "main.8c0ae291.js.map": "/static/js/main.8c0ae291.js.map",
+    "main.2835d9ae.js.map": "/static/js/main.2835d9ae.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31fab167.css",
-    "static/js/main.8c0ae291.js"
+    "static/js/main.2835d9ae.js"
   ]
 }
