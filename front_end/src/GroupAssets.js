@@ -18,7 +18,7 @@ const GroupAssets=[
     {
         name:"Hyolyn",
         imgURL:[hyolyn_per1,soonImage],
-        videoLink:["https://www.youtube.com/watch?v=2D2FoanXVL0",""]
+        videoLink:["https://www.youtube.com/watch?v=2D2FoanXVL0","#"]
     },
     {
         name:"Brave Girls",
@@ -38,12 +38,12 @@ const GroupAssets=[
     {
         name:"Viviz",
         imgURL:[viviz_per1,soonImage],
-        videoLink:["https://www.youtube.com/watch?v=rY8Gz8bBoR8",""]
+        videoLink:["https://www.youtube.com/watch?v=rY8Gz8bBoR8","#"]
     },
     {
         name:"Ke1per",
         imgURL:[ke1per_per1,soonImage],
-        videoLink:["https://www.youtube.com/watch?v=THiACt2pURE",""]
+        videoLink:["https://www.youtube.com/watch?v=THiACt2pURE","#"]
     }
 
 ]
