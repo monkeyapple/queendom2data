@@ -8,7 +8,7 @@ const Cards=(props)=>{
                     imgURL={group.imgURL}
                     performanceNum={props.performanceNum}
                     groupname={group.name}
-                    link={group.videoLink[props.performanceNum]}
+                    link={group.videoLink[props.performanceNum-1]}
                 />
             </div>
         );
