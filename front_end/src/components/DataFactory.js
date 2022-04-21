@@ -9,8 +9,8 @@ export const DataFactory=(data)=>{
 
     try{
         const getAlldata=Object.values(data).map((rowData,index)=>{
-            if(rowData[13].slice(0,10)===data[data.length-1][13].slice(0,10) && rowData[13].slice(11)==="00:00:00" ){
-                lastDayTime=rowData[13]
+            if(rowData[13].slice(0,16)===data[data.length-1][13].slice(0,16) && rowData[13].slice(17,25)==="00:00:00" ){
+                lastDayTime=rowData[13].slice(5,12)+rowData[13].slice(17,25)
                 const lastday_row_values = Object.values(rowData)
                 for(var i=0;i<lastday_row_values.length-1;i++){
                     if (typeof lastday_row_values[i] == 'number'){
@@ -30,7 +30,7 @@ export const DataFactory=(data)=>{
             }
             
             sumLastRow=sumLastRow_v.toLocaleString()
-            lastRowTime=rowData[13]
+            lastRowTime=rowData[13].slice(5,12)+rowData[13].slice(17,25)
             var substractResult=sumLastRow_v-sumLastDay_v
             subtractionViews=substractResult.toLocaleString()
             }    

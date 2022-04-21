@@ -30,7 +30,7 @@ function App() {
     }; 
     fetchDataHandler();
   },[])
-  console.log('per1data is:'+per1data)
+  console.log(per1data)
   return(
     <div>
       <div className='container-fluid'>

@@ -26,6 +26,7 @@ ChartJS.register(
 
 const LineChart=(props)=>{
   const options = {
+    tension:0.4,
     spanGaps:true,
     layout:{
       padding:{
@@ -57,21 +58,13 @@ const LineChart=(props)=>{
     },
     elements: {
         point: {
-            radius: 0.5 // default to disabled in all datasets
+            radius: 0.3 // default to disabled in all datasets
         }
     },
     plugins: {
       legend: {
         position: 'top',
       },
-      // title: {
-      //   display: true,
-      //   text: 'YouTube Views',
-      //   align:'center',
-      //   font:{
-      //     size:20
-      //   }
-      // },
 
     },
 
