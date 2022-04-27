@@ -37,9 +37,9 @@ function App() {
         <div className='page-Head'>
           <h4>Queendom2Data</h4>
         </div>
-        <section className="per1-section">
+        {/* <section className="per1-section">
           <ViewCharts allData={per1data.allData} performanceNum={Number('1')} assets={GroupAssets} totalViews={per1data.sumLastRow} totalViewTime={per1data.lastRowTime} subtractionViews={per1data.subtractionViews} lastDayTotalViews={per1data.sumLastDay} lastDayTime={per1data.lastDayTime}/>
-        </section>
+        </section> */}
         <section className="per2-section">
           <ViewCharts allData={per2data.allData} performanceNum={Number('2')} assets={GroupAssets} totalViews={per2data.sumLastRow} totalViewTime={per2data.lastRowTime} subtractionViews={per2data.subtractionViews} lastDayTotalViews={per2data.sumLastDay} lastDayTime={per2data.lastDayTime}/>
         </section>
