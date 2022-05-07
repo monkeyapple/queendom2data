@@ -48,10 +48,14 @@ function App() {
   console.log(typeof(per3_v_data))
   return(
     <div>
-      <div className='container-fluid'>
+      <div className="container-fluid">
         <div className='page-Head'>
           <h4>Queendom2Data</h4>
         </div>
+        <div className="d-flex justify-content-center">
+          (Time Zone:Seoul, South Korea)
+        </div>
+        
         <section className="per1-section">
           <ViewCharts allData={per1data.allData} performanceNum={Number('1')} assets={GroupAssets} totalViews={per1data.sumLastRow} totalViewTime={per1data.lastRowTime} subtractionViews={per1data.subtractionViews} lastDayTotalViews={per1data.sumLastDay} lastDayTime={per1data.lastDayTime}/>
         </section>
