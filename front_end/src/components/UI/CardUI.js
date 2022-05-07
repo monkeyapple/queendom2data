@@ -27,7 +27,7 @@ export const VocalCardUI=(props)=>{
                         <div className="col mb-1">
                             <h9 className="card-title">{props.groupname}</h9>
                         </div>
-                        <div className="col mt-2">
+                        <div className="col mt-1">
                             <a href={props.link} className='btn btn-outline-success' target="_blank">                
                             Watch
                             </a>
