@@ -23,10 +23,17 @@ export const VocalCardUI=(props)=>{
                     <VideoImage imgURL={props.imgURL} performanceNum={props.performanceNum}/>
                 </div>
                 <div className="card-body col-lg-6 my-auto">
-                    <h5 className="card-title">{props.groupname}</h5>
-                    <a href={props.link} className='btn btn-outline-success' target="_blank">                
-                    Watch
-                    </a>
+                    <div className="row">
+                        <div className="col mb-1">
+                            <h9 className="card-title">{props.groupname}</h9>
+                        </div>
+                        <div className="col mt-2">
+                            <a href={props.link} className='btn btn-outline-success' target="_blank">                
+                            Watch
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
             </div>    
         </div>

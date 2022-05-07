@@ -53,19 +53,19 @@ const GroupAssets=[
 ]
 const VocalGroupAssets=[
     {
-        name:"Hyolyn \n + \n BraveGirls",
+        name:"Hyolyn+BraveGirls",
         imgURL:[hyolynbravegirls_per3_v],
         videoLink:["https://www.youtube.com/watch?v=qsCO_iifc30"]
 
     },
     {
-        name:"WJSN \n + \n Viviz",
+        name:"WJSN+Viviz",
         imgURL:[wjsnviviz_per3_v],
         videoLink:["https://www.youtube.com/watch?v=Wm1quwZiefQ"]
 
     },
     {
-        name:"Loona \n + \n Ke1per",
+        name:"Loona+Ke1per",
         imgURL:[loonakep1er_per3_v],
         videoLink:["https://www.youtube.com/watch?v=RkvoilXKGN4"]
 
