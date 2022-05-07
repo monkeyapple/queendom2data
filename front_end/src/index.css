@@ -114,6 +114,15 @@ h6{
   position:relative;
   color:gray;
 }
+h7{
+  font-family: 'Poppins';
+  font-weight: 300;
+  margin: 100px auto;
+  font-size: 40px;
+  max-width: 600px;
+  position:relative;
+  color:rgb(75, 75, 75);
+}
 
 
 /* Per1card */
