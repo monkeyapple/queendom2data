@@ -37,7 +37,7 @@ export const VocalCards=(props)=>{
       
     return(
         <div>
-            <div>
+            <div className="unit-title">
                 <h7>Vocal Unit</h7>
             </div>
                 

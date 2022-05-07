@@ -32,13 +32,13 @@ const VocalViewCharts=(props)=>{
 
 
             <div class="container-fluid view-chart row">
-                <div className="col-lg-4 my-auto">
+                <div className="col-lg-4">
                     <VocalCards assets={props.assets} performanceNum={props.performanceNum}/>
                 </div>
                 <div className="view-chart col-lg-8">
                     <div className="card">
                         <div className="card-header">
-                            <h2>YouTube Views (Time in Seoul, South Korea)</h2>
+                            <h2>YouTube Views</h2>
                         </div>
                         <div className="card-body">
                             <VocalLineChart labels={labels} hyolynBraveGirlsViewData={hyolynBravegirlsViewData} wjsnVivizViewData={wjsnVivizViewData} loonaKep1erViewData={loonaKep1erViewData}/>

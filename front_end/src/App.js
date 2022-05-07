@@ -60,7 +60,12 @@ function App() {
         </section>
         <section className="per3-section">
           <VocalViewCharts allData={per3_v_data} performanceNum={Number('1')} assets={VocalGroupAssets} />
+          <div className='textTitle divider'>
+            <h1>Dance Unit</h1>
+          </div>
+        <div class="neu">Coming Soon</div>
         </section>
+
       </div>
       <Footer/>
     </div>

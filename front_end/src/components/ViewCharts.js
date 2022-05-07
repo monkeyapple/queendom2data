@@ -48,7 +48,7 @@ const ViewCharts=(props)=>{
             <div className="container-fluid view-chart">
                 <div className="card">
                     <div className="card-header">
-                        <h2>YouTube Views (Time in Seoul, South Korea)</h2>
+                        <h2>YouTube Views</h2>
                     </div>
                     <div className="card-body">
                         <ChartTotal totalViews={props.totalViews} totalViewTime={props.totalViewTime} subtractionViews={props.subtractionViews} lastDayTotalViews={props.lastDayTotalViews} lastDayTime={props.lastDayTime}/>
