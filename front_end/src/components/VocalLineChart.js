@@ -76,21 +76,21 @@ const VocalLineChart=(props)=>{
         {
             label: 'Hyolyn+BraveGirls',
             data: props.hyolynBraveGirlsViewData,
-            borderColor: 'rgb(32,0,114)',
-            backgroundColor: 'rgba(32,0,114, 0.5)',
+            borderColor: 'rgb(64,0,23)',
+            backgroundColor: 'rgba(64,0,23, 0.5)',
         },
         {
             label: 'WJSN+Viviz',
             data: props.wjsnVivizViewData,
-            borderColor: 'rgb(250,212,0)',
-            backgroundColor: 'rgba(250,212,0, 0.5)',
+            borderColor: 'rgb(130,210,220)',
+            backgroundColor: 'rgba(130,210,220, 0.5)',
         },
 
         {
             label: 'Loona+Kep1er',
             data: props.loonaKep1erViewData,
-            borderColor: 'rgb(230, 120, 12)',
-            backgroundColor: 'rgba(230, 120, 12, 0.5)',
+            borderColor: 'rgb(20, 220, 12)',
+            backgroundColor: 'rgba(20, 220, 12, 0.5)',
         }
 
     ],

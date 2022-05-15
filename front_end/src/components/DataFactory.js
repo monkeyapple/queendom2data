@@ -10,31 +10,32 @@ const DataFactory=(data)=>{
     try{
         const len=data.length
         const getAlldata=Object.values(data).map((rowData,index)=>{
-            if(rowData[13].slice(0,16)===data[data.length-2][13].slice(0,16) && rowData[13].slice(17,25)==="00:00:00" ){
+            if(rowData[13].slice(0,16)===data[length-1][13].slice(0,16) && rowData[13].slice(17,25)==="00:00:00" ){
                 const yesterday_row_values = Object.values(rowData)
                 for(i=0;i<yesterday_row_values.length-1;i++){
                     if (typeof yesterday_row_values[i] == 'number'){
                         sumYesterday_v+=yesterday_row_values[i]
                     }
                 }
-
-            if(rowData[13].slice(0,16)===data[data.length-1][13].slice(0,16) && rowData[13].slice(17,25)==="00:00:00" ){
+                sumYesterday=sumYesterday_v.toLocaleString()
+                yesterdayTime=rowData[13].slice(5,12)+rowData[13].slice(17,25)
+            }
+                
+            if(rowData[13].slice(0,16)===data[length-1][13].slice(0,16) && rowData[13].slice(17,25)==="00:00:00" ){
                 todayTime=rowData[13].slice(5,12)+rowData[13].slice(17,25)
                 const today_row_values = Object.values(rowData)
                 for(var i=0;i<today_row_values.length-1;i++){
                     if (typeof today_row_values[i] == 'number'){
                         sumToday_v+=today_row_values[i]
                     }
+                }
+                sumToday= sumToday_v.toLocaleString()
+                todayTime=rowData[13].slice(5,12)+rowData[13].slice(17,25)
             }
-            sumToday= sumToday_v.toLocaleString()
-            }
-
-            sumYesterday=sumYesterday_v.toLocaleString()
-            todayTime=rowData[13].slice(5,12)+rowData[13].slice(17,25)
 
             var substractResult=sumToday_v-sumYesterday_v
             subtractionViews=substractResult.toLocaleString()
-            }    
+  
             return{
                 wjsn_views:rowData[1],
                 wjsn_likes:rowData[2],

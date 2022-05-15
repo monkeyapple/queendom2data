@@ -18,7 +18,7 @@ code {
 }
 
 .page-Head{
-  margin-bottom: rem;
+  margin-bottom: 1rem;
 }
 .container-fluid{
   padding-left: 2rem;
@@ -194,4 +194,7 @@ h9{
 /* units */
 .unit-title{
   text-align: center;
+}
+.unit-margin{
+  margin-bottom:2rem;
 }

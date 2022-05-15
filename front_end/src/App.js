@@ -3,8 +3,8 @@ import { parseWithOptions } from 'date-fns/fp';
 import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect} from "react";
-import DataFactory from './components/DataFactory';
-// import DataFactoryOptimize from './components/DataFactoryOptimize';
+// import DataFactory from './components/DataFactory';
+import DataFactoryOptimize from './components/DataFactoryOptimize';
 import GroupAssets,{VocalGroupAssets,DanceGroupAssets} from './GroupAssets';
 import ViewCharts from './components/ViewCharts';
 import VocalViewCharts from './components/VocalViewChart';
@@ -20,13 +20,12 @@ function App() {
     useEffect(()=>{
     const fetchDataHandler=async()=>{
       try{
-        const response=await axios.get("http://localhost:5000/fetch") 
-        // const response=await axios.get("https://queendom2.herokuapp.com/fetch") 
+        // const response=await axios.get("http://localhost:5000/fetch") 
+        const response=await axios.get("https://queendom2.herokuapp.com/fetch") 
         const rawdata=await response.data
-        // const data1=DataFactoryOptimize(rawdata.per1)
-        // const data2=DataFactoryOptimize(rawdata.per2)
-        const data1=DataFactory(rawdata.per1)
-        const data2=DataFactory(rawdata.per2)
+        const data1=DataFactoryOptimize(rawdata.per1)
+        const data2=DataFactoryOptimize(rawdata.per2)
+
         SetPer1Data(data1) 
         SetPer2Data(data2)
         //performance 3_vocal
@@ -81,14 +80,12 @@ function App() {
         <section className="per2-section">
           <ViewCharts allData={per2data.allData} performanceNum={Number('2')} assets={GroupAssets} totalViews={per2data.sumToday} totalViewTime={per2data.todayTime} subtractionViews={per2data.subtractionViews} lastDayTotalViews={per2data.sumYesterday} lastDayTime={per2data.yesterdayTime}/>
         </section>
-        <section className="per3-section">
-          <VocalViewCharts allData={per3_v_data} performanceNum={Number('1')} assets={VocalGroupAssets} />
+        <section className="per3-section unit-margin">
+          <VocalViewCharts allData={per3_v_data} performanceNum={Number('1')} assets={VocalGroupAssets} unitName='Vocal Unit'/>
         </section>
-        <section className="per4-section">
-          <DanceViewCharts allData={per4_d_data} performanceNum={Number('1')} assets={DanceGroupAssets} />
-          <div className='textTitle divider'>
-            <h1>Group Performance</h1>
-          </div>
+        <section className="per4-section unit-margin">
+          <DanceViewCharts allData={per4_d_data} performanceNum={Number('1')} assets={DanceGroupAssets} unitName='Dance Unit'/>
+
           <div class="neu">Coming Soon</div>
         </section>
 

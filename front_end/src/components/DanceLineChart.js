@@ -76,21 +76,21 @@ const DanceLineChart=(props)=>{
         {
             label: 'Hyolyn+WJSN',
             data: props.hyolynwjsnViewData,
-            borderColor: 'rgb(32,0,114)',
-            backgroundColor: 'rgba(32,0,114, 0.5)',
+            borderColor: 'rgb(32,150,90)',
+            backgroundColor: 'rgba(32,150,90, 0.5)',
         },
         {
             label: 'BraveGirls+Loona',
             data: props.bravegirlsloonaViewData,
-            borderColor: 'rgb(250,212,0)',
-            backgroundColor: 'rgba(250,212,0, 0.5)',
+            borderColor: 'rgb(100,44,0)',
+            backgroundColor: 'rgba(100,44,0, 0.5)',
         },
 
         {
             label: 'Viviz+Kep1er',
             data: props.vivizkep1erViewData,
-            borderColor: 'rgb(230, 120, 12)',
-            backgroundColor: 'rgba(230, 120, 12, 0.5)',
+            borderColor: 'rgb(230, 200, 100)',
+            backgroundColor: 'rgba(230, 120, 100, 0.5)',
         }
 
     ],

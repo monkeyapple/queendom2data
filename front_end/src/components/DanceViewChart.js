@@ -26,14 +26,9 @@ const DanceViewCharts=(props)=>{
     }
     return(
         <div>
-            <div className='textTitle divider'>
-                <h1>Round 3</h1>
-            </div>
-
-
             <div class="container-fluid view-chart row">
                 <div className="col-lg-4">
-                    <UnitCards assets={props.assets} performanceNum={props.performanceNum}/>
+                    <UnitCards assets={props.assets} performanceNum={props.performanceNum} unitName={props.unitName}/>
                 </div>
                 <div className="view-chart col-lg-8">
                     <div className="card">

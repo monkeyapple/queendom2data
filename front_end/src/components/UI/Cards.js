@@ -38,7 +38,7 @@ export const UnitCards=(props)=>{
     return(
         <div>
             <div className="unit-title">
-                <h7>Vocal Unit</h7>
+                <h7>{props.unitName}</h7>
             </div>
                 
             {props.assets.map(cardLayout)}   

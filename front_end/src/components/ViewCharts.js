@@ -1,5 +1,4 @@
 import LineChart from "./LineChart";
-import LineChartScroll from "./LineChartScroll";
 import "./UI/Shadowbox.css";
 import {Cards} from "./UI/Cards";
 import ChartTotal from "./ChartTotal";
