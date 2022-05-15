@@ -20,7 +20,7 @@ const DataFactoryOptimize=(data)=>{
         }
         sumToday=sumToday_v.toLocaleString()
         
-        //yesterday's row of data
+        //yesterday's row of data.
         const yesterday_row_values=data[len-2]
         yesterdayTime=yesterday_row_values[13].slice(5,12)+yesterday_row_values[13].slice(17,25)
         for(var n=0;n<yesterday_row_values.length-1;n++){
