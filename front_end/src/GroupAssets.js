@@ -17,6 +17,10 @@ import wjsnviviz_per3_v from "./images/wjsnviviz_per3_vocal.jpeg"
 import hyolynbravegirls_per3_v from "./images/hyolynbravegirls_per3_vocal.jpeg"
 import loonakep1er_per3_v from "./images/loonakep1er_per3_vocal.jpeg"
 
+import hyolynwjsn_per3_d from "./images/hyolynwjsn_per3_dance.jpeg"
+import bravegirlsloona_per3_d from "./images/bravegirlsloona_per3_dance.jpeg"
+import vivizkep1er_per3_d from "./images/vivizkep1er_per3_dance.jpeg"
+
 const GroupAssets=[
 
     {
@@ -71,5 +75,25 @@ const VocalGroupAssets=[
 
     }
 ]
+const DanceGroupAssets=[
+    {
+        name:"Hyolyn+WJSN",
+        imgURL:[hyolynwjsn_per3_d],
+        videoLink:["https://www.youtube.com/watch?v=AthYcVXwBAY"]
+
+    },
+    {
+        name:"BraveGirls+Loona",
+        imgURL:[bravegirlsloona_per3_d],
+        videoLink:["https://www.youtube.com/watch?v=9nzIFQsUGVI"]
+
+    },
+    {
+        name:"Viviz+Kep1er",
+        imgURL:[vivizkep1er_per3_d],
+        videoLink:["https://www.youtube.com/watch?v=rKRowS7eo1I"]
+
+    }
+]
 export default GroupAssets;
-export {VocalGroupAssets};
+export {VocalGroupAssets,DanceGroupAssets};

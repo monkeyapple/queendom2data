@@ -15,7 +15,7 @@ export const CardUI=(props)=>{
         </div>
     );
 }
-export const VocalCardUI=(props)=>{
+export const UnitCardUI=(props)=>{
     return(
         <div className="card text-center">
             <div className="row">

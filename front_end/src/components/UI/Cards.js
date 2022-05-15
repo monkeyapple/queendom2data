@@ -1,4 +1,4 @@
-import {CardUI,VocalCardUI} from "./CardUI"
+import {CardUI,UnitCardUI} from "./CardUI"
 
 export const Cards=(props)=>{
     const cardLayout=(group)=>{
@@ -21,11 +21,11 @@ export const Cards=(props)=>{
         </div>
     );
 }
-export const VocalCards=(props)=>{
+export const UnitCards=(props)=>{
     const cardLayout=(group)=>{
         return(
             <div className="row mb-3 mt-3">
-                <VocalCardUI 
+                <UnitCardUI 
                     imgURL={group.imgURL}
                     performanceNum={props.performanceNum}
                     groupname={group.name}

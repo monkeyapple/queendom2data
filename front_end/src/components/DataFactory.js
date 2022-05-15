@@ -1,37 +1,38 @@
-export const DataFactory=(data)=>{
-    var sumLastDay
-    var sumLastRow
-    var lastRowTime
-    var lastDayTime
+const DataFactory=(data)=>{
+    var sumToday
+    var sumYesterday
+    var todayTime
+    var yesterdayTime
     var subtractionViews
-    var sumLastRow_v=0
-    var sumLastDay_v=0
+    var sumYesterday_v=0
+    var sumToday_v=0
 
     try{
+        const len=data.length
         const getAlldata=Object.values(data).map((rowData,index)=>{
+            if(rowData[13].slice(0,16)===data[data.length-2][13].slice(0,16) && rowData[13].slice(17,25)==="00:00:00" ){
+                const yesterday_row_values = Object.values(rowData)
+                for(i=0;i<yesterday_row_values.length-1;i++){
+                    if (typeof yesterday_row_values[i] == 'number'){
+                        sumYesterday_v+=yesterday_row_values[i]
+                    }
+                }
+
             if(rowData[13].slice(0,16)===data[data.length-1][13].slice(0,16) && rowData[13].slice(17,25)==="00:00:00" ){
-                lastDayTime=rowData[13].slice(5,12)+rowData[13].slice(17,25)
-                const lastday_row_values = Object.values(rowData)
-                for(var i=0;i<lastday_row_values.length-1;i++){
-                    if (typeof lastday_row_values[i] == 'number'){
-                        sumLastDay_v+=lastday_row_values[i]
+                todayTime=rowData[13].slice(5,12)+rowData[13].slice(17,25)
+                const today_row_values = Object.values(rowData)
+                for(var i=0;i<today_row_values.length-1;i++){
+                    if (typeof today_row_values[i] == 'number'){
+                        sumToday_v+=today_row_values[i]
                     }
             }
-            sumLastDay= sumLastDay_v.toLocaleString()
+            sumToday= sumToday_v.toLocaleString()
             }
-            // when reach the last element in the row,
-            //re-initialize the sum amount
-            if(data.length-1===index){
-            const last_row_values = Object.values(rowData)
-            for(i=0;i<last_row_values.length-1;i++){
-                if (typeof last_row_values[i] == 'number'){
-                    sumLastRow_v+=last_row_values[i]
-                }
-            }
-            
-            sumLastRow=sumLastRow_v.toLocaleString()
-            lastRowTime=rowData[13].slice(5,12)+rowData[13].slice(17,25)
-            var substractResult=sumLastRow_v-sumLastDay_v
+
+            sumYesterday=sumYesterday_v.toLocaleString()
+            todayTime=rowData[13].slice(5,12)+rowData[13].slice(17,25)
+
+            var substractResult=sumToday_v-sumYesterday_v
             subtractionViews=substractResult.toLocaleString()
             }    
             return{
@@ -54,10 +55,10 @@ export const DataFactory=(data)=>{
 
         return(
             {
-                'sumLastDay':sumLastDay,
-                'sumLastRow':sumLastRow,
-                'lastRowTime':lastRowTime,
-                'lastDayTime':lastDayTime,
+                'sumToday':sumToday,
+                'sumYesterday':sumYesterday,
+                'todayTime':todayTime,
+                'yesterdayTime':yesterdayTime,
                 'subtractionViews':subtractionViews,
                 'allData':getAlldata
         }
@@ -67,3 +68,4 @@ export const DataFactory=(data)=>{
     }
 
 }
+export default DataFactory;

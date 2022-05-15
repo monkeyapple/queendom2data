@@ -1,13 +1,13 @@
-import VocalLineChart from "./VocalLineChart";
+import DanceLineChart from "./DanceLineChart";
 import "./UI/Shadowbox.css";
 import {UnitCards} from "./UI/Cards";
-const VocalViewCharts=(props)=>{
-    const wjsnVivizViewData=[];
-    // const wjsnVivizLikesData=[];
-    const loonaKep1erViewData=[];
-    // const loonaKep1erLikesData=[];
-    const hyolynBravegirlsViewData=[];
-    // const hyolynBravegirlsLikesData=[];
+const DanceViewCharts=(props)=>{
+    const hyolynwjsnViewData=[];
+    // const hyolynwjsnViewDataLikesData=[];
+    const bravegirlsloonaViewData=[];
+    // const bravegirlsloonaLikesData=[];
+    const vivizkep1erViewData=[];
+    // const vivizkep1erLikesData=[];
 
     const labels=[];
     
@@ -15,12 +15,12 @@ const VocalViewCharts=(props)=>{
         var d=new Date(ele['update_time'])
         d.setHours(d.getHours() - 8);
         labels.push(d);
-        wjsnVivizViewData.push(ele['wjsn_viviz_views']);
-        // wjsnVivizLikesData.push();
-        loonaKep1erViewData.push(ele['loona_kep1er_views']);
-        //loonaKep1erViewData.push();
-        hyolynBravegirlsViewData.push(ele['hyolyn_bravegirls_views']);
-        // hyolynBravegirlsLikesData.push();
+        hyolynwjsnViewData.push(ele['hoylyn_wjsn_views']);
+        // hyolynwjsnLikesData.push();
+        bravegirlsloonaViewData.push(ele['bravegirls_loona_views']);
+        //bravegirlsloonaViewData.push();
+        vivizkep1erViewData.push(ele['viviz_kep1er_views']);
+        // vivizkep1erLikesData.push();
 
     });
     }
@@ -41,7 +41,7 @@ const VocalViewCharts=(props)=>{
                             <h2>YouTube Views</h2>
                         </div>
                         <div className="card-body">
-                            <VocalLineChart labels={labels} hyolynBraveGirlsViewData={hyolynBravegirlsViewData} wjsnVivizViewData={wjsnVivizViewData} loonaKep1erViewData={loonaKep1erViewData}/>
+                            <DanceLineChart labels={labels} hyolynwjsnViewData={hyolynwjsnViewData} bravegirlsloonaViewData={bravegirlsloonaViewData} vivizkep1erViewData={vivizkep1erViewData}/>
                         </div>
                     </div>  
                 </div>
@@ -53,4 +53,4 @@ const VocalViewCharts=(props)=>{
     );
 
 }
-export default VocalViewCharts;
+export default DanceViewCharts;
