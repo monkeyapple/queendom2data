@@ -3,7 +3,7 @@ import { parseWithOptions } from 'date-fns/fp';
 import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect} from "react";
-// import DataFactory from './components/DataFactory';
+import DataFactory from './components/DataFactory';
 import DataFactoryOptimize from './components/DataFactoryOptimize';
 import GroupAssets,{VocalGroupAssets,DanceGroupAssets} from './GroupAssets';
 import ViewCharts from './components/ViewCharts';
@@ -11,11 +11,13 @@ import VocalViewCharts from './components/VocalViewChart';
 import DanceViewCharts from './components/DanceViewChart';
 import Footer from './components/Footer';
 
+
 function App() {
   const[per1data,SetPer1Data]=useState({});
   const[per2data,SetPer2Data]=useState({});
   const[per3_v_data,SetPer3Data]=useState([]);
   const[per4_d_data,SetPer4Data]=useState([]);
+  const[per5data,SetPer5Data]=useState({});
   // Solution1: use axios 
     useEffect(()=>{
     const fetchDataHandler=async()=>{
@@ -25,9 +27,12 @@ function App() {
         const rawdata=await response.data
         const data1=DataFactoryOptimize(rawdata.per1)
         const data2=DataFactoryOptimize(rawdata.per2)
+        //Performance_3_final
+        const data5=DataFactory(rawdata.per5)
 
         SetPer1Data(data1) 
         SetPer2Data(data2)
+        SetPer5Data(data5)
         //performance 3_vocal
         const getVocalData=Object.values(rawdata.per3).map((rowData)=>{
 
@@ -63,7 +68,8 @@ function App() {
     }; 
     fetchDataHandler();
   },[])
-  console.log(per1data)
+
+  console.log(per5data)
   return(
     <div>
       <div className="container-fluid">
@@ -85,9 +91,11 @@ function App() {
         </section>
         <section className="per4-section unit-margin">
           <DanceViewCharts allData={per4_d_data} performanceNum={Number('1')} assets={DanceGroupAssets} unitName='Dance Unit'/>
-
-          <div class="neu">Coming Soon</div>
         </section>
+        <section className="per5-section">
+          <ViewCharts allData={per5data.allData} performanceNum={Number('3')} assets={GroupAssets} totalViews={per5data.sumToday} totalViewTime={per5data.todayTime} subtractionViews={per5data.subtractionViews} lastDayTotalViews={per5data.sumYesterday} lastDayTime={per5data.yesterdayTime}/>
+        </section>
+        <div class="neu">26 May</div>
 
 
       </div>

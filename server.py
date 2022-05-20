@@ -14,7 +14,8 @@ def fetch_all_groups():
     table2Rows=dbOp.query_table2()
     table3Rows=dbOp.query_table3()
     table4Rows=dbOp.query_table4()
-    return jsonify({'per1':table1Rows,'per2':table2Rows,'per3':table3Rows,'per4':table4Rows})
+    table5Rows=dbOp.query_table5()
+    return jsonify({'per1':table1Rows,'per2':table2Rows,'per3':table3Rows,'per4':table4Rows,'per5':table5Rows})
     
 @app.route('/')
 def serve():

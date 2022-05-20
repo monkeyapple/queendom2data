@@ -21,37 +21,45 @@ import hyolynwjsn_per3_d from "./images/hyolynwjsn_per3_dance.jpeg"
 import bravegirlsloona_per3_d from "./images/bravegirlsloona_per3_dance.jpeg"
 import vivizkep1er_per3_d from "./images/vivizkep1er_per3_dance.jpeg"
 
+import wjsn_per3 from "./images/wjsn_per3.jpeg"
+import viviz_per3 from "./images/viviz_per3.jpeg"
+import ke1per_per3 from "./images/ke1per_per3.jpeg"
+
+import hyolyn_per3 from "./images/comesoon.jpeg"
+import loona_per3 from "./images/comesoon.jpeg"
+import bravegirls_per3 from "./images/comesoon.jpeg"
+
 const GroupAssets=[
 
     {
         name:"Hyolyn",
-        imgURL:[hyolyn_per1,hyolyn_per2],
-        videoLink:["https://www.youtube.com/watch?v=2D2FoanXVL0","https://www.youtube.com/watch?v=BEZk9QVjA-s"]
+        imgURL:[hyolyn_per1,hyolyn_per2,hyolyn_per3],
+        videoLink:["https://www.youtube.com/watch?v=2D2FoanXVL0","https://www.youtube.com/watch?v=BEZk9QVjA-s","#"]
     },
     {
         name:"Brave Girls",
-        imgURL:[bravegirls_per1,bravegirls_per2],
-        videoLink:["https://www.youtube.com/watch?v=JfqGsj2FUBw","https://www.youtube.com/watch?v=jjjg8kUcl20"]
+        imgURL:[bravegirls_per1,bravegirls_per2,bravegirls_per3],
+        videoLink:["https://www.youtube.com/watch?v=JfqGsj2FUBw","https://www.youtube.com/watch?v=jjjg8kUcl20","#"]
     },
     {
         name:"WJSN",
-        imgURL:[wjsn_per1,wjsn_per2],
-        videoLink:["https://www.youtube.com/watch?v=UITFHyWHS9Y","https://www.youtube.com/watch?v=9DBy1r7YMMg"]
+        imgURL:[wjsn_per1,wjsn_per2,wjsn_per3],
+        videoLink:["https://www.youtube.com/watch?v=UITFHyWHS9Y","https://www.youtube.com/watch?v=9DBy1r7YMMg","https://www.youtube.com/watch?v=hDm0qLxZd9I"]
     },
     {
         name:"Loona",
-        imgURL:[loona_per1,loona_per2],
-        videoLink:["https://www.youtube.com/watch?v=87fKv045u5U","https://www.youtube.com/watch?v=ytuMObZlqOE"]
+        imgURL:[loona_per1,loona_per2,loona_per3],
+        videoLink:["https://www.youtube.com/watch?v=87fKv045u5U","https://www.youtube.com/watch?v=ytuMObZlqOE","#"]
     },
     {
         name:"Viviz",
-        imgURL:[viviz_per1,viviz_per2],
-        videoLink:["https://www.youtube.com/watch?v=rY8Gz8bBoR8","https://www.youtube.com/watch?v=NyjWRuazgsw"]
+        imgURL:[viviz_per1,viviz_per2,viviz_per3],
+        videoLink:["https://www.youtube.com/watch?v=rY8Gz8bBoR8","https://www.youtube.com/watch?v=NyjWRuazgsw","https://www.youtube.com/watch?v=XxDKzs5pT1E"]
     },
     {
         name:"Ke1per",
-        imgURL:[ke1per_per1,ke1per_per2],
-        videoLink:["https://www.youtube.com/watch?v=THiACt2pURE","https://www.youtube.com/watch?v=EzJfJhznH3s"]
+        imgURL:[ke1per_per1,ke1per_per2,ke1per_per3],
+        videoLink:["https://www.youtube.com/watch?v=THiACt2pURE","https://www.youtube.com/watch?v=EzJfJhznH3s","https://www.youtube.com/watch?v=B2xLS0GVeNI"]
     }
 
 ]
