@@ -25,21 +25,21 @@ import wjsn_per3 from "./images/wjsn_per3.jpeg"
 import viviz_per3 from "./images/viviz_per3.jpeg"
 import ke1per_per3 from "./images/ke1per_per3.jpeg"
 
-import hyolyn_per3 from "./images/comesoon.jpeg"
-import loona_per3 from "./images/comesoon.jpeg"
-import bravegirls_per3 from "./images/comesoon.jpeg"
+import hyolyn_per3 from "./images/hyolyn_per3.jpeg"
+import loona_per3 from "./images/loona_per3.jpeg"
+import bravegirls_per3 from "./images/bravegirls_per3.jpeg"
 
 const GroupAssets=[
 
     {
         name:"Hyolyn",
         imgURL:[hyolyn_per1,hyolyn_per2,hyolyn_per3],
-        videoLink:["https://www.youtube.com/watch?v=2D2FoanXVL0","https://www.youtube.com/watch?v=BEZk9QVjA-s","#"]
+        videoLink:["https://www.youtube.com/watch?v=2D2FoanXVL0","https://www.youtube.com/watch?v=BEZk9QVjA-s","https://www.youtube.com/watch?v=o6QFNoJS1Iw"]
     },
     {
         name:"Brave Girls",
         imgURL:[bravegirls_per1,bravegirls_per2,bravegirls_per3],
-        videoLink:["https://www.youtube.com/watch?v=JfqGsj2FUBw","https://www.youtube.com/watch?v=jjjg8kUcl20","#"]
+        videoLink:["https://www.youtube.com/watch?v=JfqGsj2FUBw","https://www.youtube.com/watch?v=jjjg8kUcl20","https://www.youtube.com/watch?v=MShOLenjduY"]
     },
     {
         name:"WJSN",
@@ -49,7 +49,7 @@ const GroupAssets=[
     {
         name:"Loona",
         imgURL:[loona_per1,loona_per2,loona_per3],
-        videoLink:["https://www.youtube.com/watch?v=87fKv045u5U","https://www.youtube.com/watch?v=ytuMObZlqOE","#"]
+        videoLink:["https://www.youtube.com/watch?v=87fKv045u5U","https://www.youtube.com/watch?v=ytuMObZlqOE","https://www.youtube.com/watch?v=aXaHB4gGAys"]
     },
     {
         name:"Viviz",

@@ -22,8 +22,8 @@ function App() {
     useEffect(()=>{
     const fetchDataHandler=async()=>{
       try{
-        // const response=await axios.get("http://localhost:5000/fetch") 
-        const response=await axios.get("https://queendom2.herokuapp.com/fetch") 
+        const response=await axios.get("http://localhost:5000/fetch") 
+        // const response=await axios.get("https://queendom2.herokuapp.com/fetch") 
         const rawdata=await response.data
         const data1=DataFactoryOptimize(rawdata.per1)
         const data2=DataFactoryOptimize(rawdata.per2)
@@ -95,7 +95,10 @@ function App() {
         <section className="per5-section">
           <ViewCharts allData={per5data.allData} performanceNum={Number('3')} assets={GroupAssets} totalViews={per5data.sumToday} totalViewTime={per5data.todayTime} subtractionViews={per5data.subtractionViews} lastDayTotalViews={per5data.sumYesterday} lastDayTime={per5data.yesterdayTime}/>
         </section>
-        <div class="neu">26 May</div>
+        <div className='textTitle divider'>
+                <h1>Final Round</h1>
+        </div>
+        <div class="neu">Come Soon</div>
 
 
       </div>

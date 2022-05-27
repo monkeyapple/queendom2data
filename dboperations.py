@@ -54,7 +54,7 @@ class DatabaseOperate():
             database_url=os.environ.get('DATABASE_URL').replace("postgres://", "postgresql://", 1)
             pg_conn=psycopg2.connect(database_url)
             pg_cur=pg_conn.cursor()
-            pg_cur.execute('SELECT * FROM qdscraper_dance')
+            pg_cur.execute("SELECT * FROM qdscraper_dance WHERE update_time :: timestamp :: time='00:00:00'")
             rows=pg_cur.fetchall()
             
         except(Exception, psycopg2.Error) as error:
