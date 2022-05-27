@@ -22,8 +22,8 @@ function App() {
     useEffect(()=>{
     const fetchDataHandler=async()=>{
       try{
-        const response=await axios.get("http://localhost:5000/fetch") 
-        // const response=await axios.get("https://queendom2.herokuapp.com/fetch") 
+        // const response=await axios.get("http://localhost:5000/fetch") 
+        const response=await axios.get("https://queendom2.herokuapp.com/fetch") 
         const rawdata=await response.data
         const data1=DataFactoryOptimize(rawdata.per1)
         const data2=DataFactoryOptimize(rawdata.per2)
