@@ -28,7 +28,7 @@ function App() {
         const data1=DataFactoryOptimize(rawdata.per1)
         const data2=DataFactoryOptimize(rawdata.per2)
         //Performance_3_final
-        const data5=DataFactory(rawdata.per5)
+        const data5=DataFactoryOptimize(rawdata.per5)
 
         SetPer1Data(data1) 
         SetPer2Data(data2)
