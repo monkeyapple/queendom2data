@@ -1,6 +1,6 @@
 # Queendom2data
 
-**App address** : www.qd2data.xyz
+**App address** : https://queendom2.herokuapp.com/
 
 Queendom2data is a data visualization app displays the YouTube views count of the ongoing K-pop reality survival show ‘Queendom2’. 
 ![Screenshot](/img/intro.jpg)
